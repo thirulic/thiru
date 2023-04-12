@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+
+
+@author: Thiruselvan
+"""
+def call(a,b):
+    for i in range(len(a)):
+        for j in a[i+1:]:
+            if a[i]+j ==b:
+                d=(a[i],j)
+                return d             
+            
+
+# number of elements
+n = int(input("Enter number of elements : "))
+  
+# Below line read inputs from user using map() function
+a = list(map(int, input("\nEnter the list of integers : ").strip().split()))[:n]
+  
+print("\nList is - ", a)
+b= int(input("enter the target value"))
+
+c=call(a,b)
+print(c)
